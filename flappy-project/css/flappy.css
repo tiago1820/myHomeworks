@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Pixel';
-    src: url(/fonts/Pixel.ttf);
+    src: url('../fonts/Pixel.ttf');
 }
 
 .flappy {
@@ -12,9 +12,11 @@
     border: 5px solid orangered;
     height: 700px;
     width: 1200px;
-    background-image: url(/images/667490-8wdiz8fe-v4.jpg);
+    /* background-image: url(../images/);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: deepskyblue;
+    overflow: hidden;
 }
 
 .personaje {
