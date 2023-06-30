@@ -13,16 +13,16 @@ class TwiceAsOld {
             i++;
             p++;
             h++;
-            if (p === h * 2) return h;
+            if(p === h * 2) return h;
         }
     }
 
     cuando = () => {
-        return this.mismaEdad() < this.hijoHoy ?
-            `Hace ${this.hijoHoy - this.mismaEdad()} años  el padre tenia el doble de la edad del hijo.` :
-            `En ${this.mismaEdad() - this.hijoHoy} años el padre tendra el doble de la edad del hijo.`;
+        return this.mismaEdad() < this.hijoHoy ? 
+        `Hace ${this.hijoHoy - this.mismaEdad()} años  el padre tenia el doble de la edad del hijo.` :
+        `En ${this.mismaEdad() - this.hijoHoy} años el padre tendra el doble de la edad del hijo.`;
     }
-
+   
 }
 
 let prueba = new TwiceAsOld(40, 5);
