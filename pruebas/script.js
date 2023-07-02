@@ -13,9 +13,7 @@ function Tab(ciudades) {
         this.elemento.appendChild(this.i.elemento);
         this.i.setOnClick(`openCity(event, '${ciudades[i].nombre}')`);
         this.i.setCity(ciudades[i].nombre);
-        if(i === 0){
-            this.i.elemento.setAttribute('id', 'defaultOpen');  
-        };
+        if (i === 0) this.i.elemento.setAttribute('id', 'defaultOpen');
     }
 
 }

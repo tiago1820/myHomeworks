@@ -1,22 +1,25 @@
-function nuevoElemento(tagName, className) {
-    const elemento = document.createElement(tagName);
-    elemento.className = className;
-    return elemento;
+function novoElemento(tagName, className) {
+    const elem = document.createElement(tagName);
+    elem.className = className;
+    return elem;
 }
 
-function Tuberia(reversa = false) {
-    this.elemento = nuevoElemento('div', 'tuberia');
+// document.querySelector('.flappy').appendChild(novoElemento('div', 'prueba'));
 
-    const borda = nuevoElemento('div', 'borda');
-    const cuerpo = nuevoElemento('div', 'cuerpo');
-    this.elemento.appendChild(reversa ? cuerpo : borda);
-    this.elemento.appendChild(reversa ? borda : cuerpo);
+function Barreira(reversa = false) {
+    this.elemento = novoElemento('div', 'barreira');
 
-    this.setAltura = altura => cuerpo.style.height = `${altura}px`;
+    const borda = novoElemento('div', 'borda');
+    const corpo = novoElemento('div', 'corpo');
+    this.elemento.appendChild(reversa ? corpo : borda);
+    this.elemento.appendChild(reversa ? borda : corpo);
+
+    this.setAltura = altura => corpo.style.height = `${altura}px`;
 
 }
 
-const b = new Tuberia(true);
+const b = new Barreira(true);
 b.setAltura(300);
 document.querySelector('.flappy').appendChild(b.elemento);
+
 
