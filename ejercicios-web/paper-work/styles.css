@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Regular.ttf') format('truetype');
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #DDD;
+    color: #FFF;
+}
+
+.container {
+    padding: 16px;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 0;
+}
+
+input[type=number]:focus {
+    background-color: #DDD;
+    outline: none;
+}
+
+hr {
+    border: 2px solid #DDD;
+}
+
+.calcular {
+    background-color: #556B2F;
+    color: #DDD;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 20px;
+}
+
+.calcular:hover {
+    opacity: 1;
+}
+
+.resultado {
+    background-color: #0D262D;
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+.resultado p {
+    border: 5px solid #DDD;
+    margin: 0;
+    padding: 20px 0;
+}
+
+main {
+    background-color: #0D262D;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

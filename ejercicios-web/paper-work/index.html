@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperWork</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <form id="formulario">
+            <div class="container">
+                <p>Tus compañeros de clase te pidieron que copiaras algunos papeles para ellos. Sabes que hay 'n'
+                    compañeros de clase y el papeleo tiene 'm' páginas.</p>
+                <p>Tu tarea es calcular cuántas páginas en blanco necesitas.</p>
+                <hr>
+
+                <label for="alumnos"><b>Numero de Compañeros</b></label>
+                <input type="number" name="alumnos" placeholder="Cantidad de compañeros" id="alumnos" required>
+
+                <label for="fotocopias"><b>Cantidad de paginas</b></label>
+                <input type="number" name="fotocopias" placeholder="Cantidad de paginas" id="fotocopias" required>
+                <hr>
+
+                <button type="submit" class="calcular">Calcular</button>
+            </div>
+        </form>
+
+        <div class="container resultado">
+            <p id="resultado">0</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
