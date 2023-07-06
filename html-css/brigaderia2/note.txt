@@ -1,1 +1,0 @@
-Agregar categorias de Brigadeiros en el array menu, y ajustar eso al HTML.
