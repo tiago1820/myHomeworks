@@ -70,7 +70,7 @@ function ArrayList() {
         ir = 0;
 
         while (il < left.length && ir < right.length) {
-            if (left[il] < right[ir]) {//5 < 4
+            if (left[il] < right[ir]) {
                 result.push(left[il++]);
             } else {
                 result.push(right[ir++]);
@@ -88,6 +88,46 @@ function ArrayList() {
         return result;
     }
 
+    this.quickSort = function () {
+        quick(array, 0, array.length - 1);
+    }
+
+    let quick = function (array, left, right) {
+        let index;
+        if (array.length > 1) {
+            index = partition(array, left, right);
+            if (left < index - 1) {
+                quick(array, left, index - 1)
+            }
+            if (index < right) {
+                quick(array, index, right)
+            }
+        }
+    }
+
+    var partition = function (array, left, right) {
+        let pivot = array[Math.floor((right + left) / 2)];
+        let i = left;
+        let j = right;
+
+        while (i <= j) {
+            while (array[i] < pivot) {
+                i++;
+            }
+
+            while (array[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                swap(array, i, j);
+                i++;
+                j--;
+            }
+        }
+
+        return i;
+    }
+
     let swap = function (array, index1, index2) {
         let aux = array[index1];
         array[index1] = array[index2];
@@ -97,13 +137,10 @@ function ArrayList() {
 }
 
 const ordem = new ArrayList();
-ordem.insert(8);
-ordem.insert(7);
-ordem.insert(6);
 ordem.insert(5);
 ordem.insert(4);
 ordem.insert(3);
 ordem.insert(2);
 ordem.insert(1);
-ordem.mergeSort();
+ordem.quickSort();
 console.log(ordem.toString());
