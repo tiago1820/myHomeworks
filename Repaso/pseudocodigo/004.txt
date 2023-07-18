@@ -1,0 +1,25 @@
+Función cacheFunction(cb)
+    // Creamos un objeto para actuar como caché
+    cache <- Objeto vacío
+
+    // Retornamos una función interna que actuará como el caché y ejecutará el callback
+    Función interna cachear(arg)
+        // Si el resultado está en el caché, simplemente lo retornamos
+        Si cache tiene una propiedad con el nombre arg
+            Retornar el valor almacenado en cache[arg]
+        Sino
+            // Si el resultado no está en el caché, ejecutamos el callback y lo almacenamos en el caché
+            resultado <- Ejecutar cb con el argumento arg
+            Asignar resultado a cache[arg]
+            Retornar resultado
+        Fin Si
+    Fin Función
+
+    Retornar cachear // Retornamos la función interna para que se pueda usar como caché
+Fin Función
+
+// Ejemplo de uso:
+Función square(n)
+    Retornar n * n
+Fin Función
+

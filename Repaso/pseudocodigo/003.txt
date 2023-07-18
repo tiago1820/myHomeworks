@@ -1,0 +1,12 @@
+Función counter()
+    contador <- 0 // Inicializamos el contador en 0
+
+    // Creamos y retornamos una función interna que actuará como el contador
+    Función interna contar()
+        contador <- contador + 1 // Incrementamos el contador en cada invocación
+        Retornar contador // Retornamos el valor actual del contador
+    Fin Función
+
+    Retornar contar // Retornamos la función interna para que se pueda usar como contador
+Fin Función
+

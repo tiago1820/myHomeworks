@@ -1,0 +1,20 @@
+Función binarioADecimal(binario)
+    // Verificar si el número binario es válido
+    Para cada dígito en binario
+        Si el dígito no es '0' y no es '1'
+            Retornar "Error: El número binario solo debe contener 0s y 1s."
+        Fin Si
+    Fin Para
+
+    decimal <- 0
+    exponente <- 0
+
+    // Recorrer el número binario de derecha a izquierda
+    Para i desde longitud de binario menos 1 hasta 0 (en decremento)
+        digito <- Convertir a entero el dígito en la posición i de binario
+        decimal <- decimal + (digito * 2^exponente)
+        exponente <- exponente + 1
+    Fin Para
+
+    Retornar decimal
+Fin Función

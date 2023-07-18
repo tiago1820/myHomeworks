@@ -1,0 +1,13 @@
+// Definimos la función crearCadena que concatena una cadena con dos delimitadores dados
+Función crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena)
+    Retornar delimitadorIzquierda + cadena + delimitadorDerecha
+Fin Función
+
+// Solución usando bind()
+// Creamos tres funciones usando bind() y establecemos los valores de los delimitadores
+Función textoAsteriscos = crearCadena.bind(null, "*", "*")
+Función textoGuiones = crearCadena.bind(null, "-", "-")
+Función textoUnderscore = crearCadena.bind(null, "_", "_")
+
+// Ahora, las funciones obtenidas solo recibirán un argumento, la cadena de texto
+// Los delimitadores ya han sido "bindeados" en las funciones textoAsteriscos, textoGuiones y textoUnderscore

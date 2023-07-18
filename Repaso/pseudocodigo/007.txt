@@ -1,0 +1,7 @@
+Función nFactorial(n)
+    Si n es 0 o n es 1
+        Retornar 1 // Caso base: el factorial de 0 y 1 es 1
+    Sino
+        Retornar n * nFactorial(n - 1) // Caso recursivo: multiplicamos n por el factorial del número anterior (n-1)
+    Fin Si
+Fin Función

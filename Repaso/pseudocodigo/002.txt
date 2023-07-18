@@ -1,0 +1,14 @@
+Función decimalABinario(decimal)
+    Si decimal es 0
+        Retornar "0" // Caso especial cuando el número decimal es 0
+
+    binario <- Cadena vacía
+
+    Mientras decimal sea mayor a 0
+        dígito <- decimal módulo 2 // Obtener el último dígito binario
+        binario <- Convertir dígito a cadena + binario // Agregar el dígito al principio del número binario
+        decimal <- decimal dividido por 2 // Eliminar el último dígito binario de decimal
+    Fin Mientras
+
+    Retornar binario
+Fin Función
