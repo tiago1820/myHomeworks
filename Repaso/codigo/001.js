@@ -14,4 +14,4 @@ function binarioADecimal(binario){
     return decimal;
 }
 
-console.log(binarioADecimal("1011"));
+console.log(binarioADecimal("1010"));
