@@ -22,11 +22,13 @@ function betterThanAverage(classPoints, yourPoints) {
 
     promedio = suma / cantidadNotas;
 
-    if (promedio < yourPoints) {
-        return true;
-    } else {
-        return false;
-    }
+    return (promedio < yourPoints) ? true : false;
+
+    // if (promedio < yourPoints) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 
 }
 
